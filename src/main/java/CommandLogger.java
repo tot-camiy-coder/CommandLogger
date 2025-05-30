@@ -36,7 +36,7 @@ public final class CommandLogger extends JavaPlugin implements Listener
         reloadConfig();
         reloadConfigValues();
         getServer().getPluginManager().registerEvents(this, this);
-    }//
+    }
 
     private void reloadConfigValues()
     {
