@@ -1,4 +1,4 @@
 name: CommandLogger
-version: '1'
+version: 'v1'
 main: CommandLogger
-api-version: '1.21'
+softdepend: [LuckPerms] # нужен для префиксов
