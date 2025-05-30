@@ -1,0 +1,4 @@
+name: CommandLogger
+version: '1'
+main: CommandLogger
+api-version: '1.21'
