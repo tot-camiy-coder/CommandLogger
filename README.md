@@ -13,3 +13,6 @@
 
 ## Screenshot:
 ![](img.png)
+
+by localhost \
+(discord: **```only_localhost```** || telegram: **```@local_explorer```**)
