@@ -1,4 +1,7 @@
 # 📑 CommandLogger 
+```minecraft plugin```
+<br>
+
 ## Features:
 - Logs all commands 📰
 - Supports excluded commands 📕
