@@ -6,6 +6,7 @@
 */
 
 import net.luckperms.api.LuckPermsProvider;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -77,6 +78,7 @@ public final class CommandLogger extends JavaPlugin implements Listener
         LuckPerms api = LuckPermsProvider.get();
         String prefix = Objects.requireNonNull(api.getUserManager().getUser(player.getUniqueId())).getCachedData().getMetaData().getPrefix();
         assert prefix != null;
+        prefix = prefix.replaceAll("&.", "");
         String logEntry = getConfig().getString("logging.format", "[{date}] {player}: /{command}")
                 .replace("{date}", dateFormat.format(new Date()))
                 .replace("{prefix}", prefix)

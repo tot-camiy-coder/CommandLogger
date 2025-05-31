@@ -1,6 +1,6 @@
 logging:
   file: "commands.log"
-  format: "[{date}] {prefix} {player}: /{command}"
+  format: "[{date}] {prefix}{player}: /{command}"
   date-format: "dd/MM/yyyy HH:mm:ss"
 
 log-all: true # логгировать всё? (все команды)
