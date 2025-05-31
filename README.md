@@ -1,9 +1,9 @@
 # 📑 CommandLogger 
 ## Features:
-- Logs all commands
-- Supports excluded commands
-- Supports enabled commands
-- Support LuckPerms prefix
+- Logs all commands 📰
+- Supports excluded commands 📕
+- Supports enabled commands 📗
+- Support LuckPerms prefix 🍀
 
 ## Usage:
 ```Add the .jar file to the server's plugins folder, then start or restart your server.```
