@@ -3,7 +3,10 @@ logging:
   format: "[{date}] {prefix}{player}: /{command}"
   date-format: "dd/MM/yyyy HH:mm:ss"
 
-log-all: true # логгировать всё? (все команды)
+log-all: true # логгировать всё комманды?
+
+need-permission: # например для логгирования только админов, модеров и тп
+  - "default" # всё, логгировать всех и вся
 
 excluded-commands: # исключение (только если включён 'log-all')
   - ""

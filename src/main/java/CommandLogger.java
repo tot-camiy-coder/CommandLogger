@@ -50,21 +50,27 @@ public final class CommandLogger extends JavaPlugin implements Listener
         Player player = e.getPlayer();
         String command = e.getMessage().replaceFirst("/", "").replace("cmi", "").replaceFirst("^\\s+", "");
 
-        if (getConfig().getBoolean("log-all"))
+        boolean hasPerm = getConfig().getStringList("need-permission")
+                .stream().anyMatch(player::hasPermission);
+
+        if (hasPerm)
         {
-            List<String> excluded = getConfig().getStringList("excluded-commands");
-            if (excluded.isEmpty() || excluded.stream()
-                    .noneMatch(s -> s.equalsIgnoreCase(command)))
+            if (getConfig().getBoolean("log-all"))
             {
-                logCmd(player, e.getMessage());
-            }
-        }
-        else {
-            for (String string : getConfig().getStringList("enabled-commands"))
-            {
-                if (string.equalsIgnoreCase(command.split(" ")[0]))
+                List<String> excluded = getConfig().getStringList("excluded-commands");
+                if (excluded.isEmpty() || excluded.stream()
+                        .noneMatch(s -> s.equalsIgnoreCase(command)))
                 {
                     logCmd(player, e.getMessage());
+                }
+            }
+            else {
+                for (String string : getConfig().getStringList("enabled-commands"))
+                {
+                    if (string.equalsIgnoreCase(command.split(" ")[0]))
+                    {
+                        logCmd(player, e.getMessage());
+                    }
                 }
             }
         }
