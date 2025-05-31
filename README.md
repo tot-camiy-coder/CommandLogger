@@ -10,3 +10,6 @@
 
 ## Dependencies:
 - ```Paper 1.19.4+```
+
+## Screensot:
+[img.png]
