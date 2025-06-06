@@ -12,8 +12,8 @@
 ```Add the .jar file to the server's plugins folder, then start or restart your server.```
 
 ## Dependencies:
-- ☕ ```Java 17+```
-- 🧩 ```Paper 1.19.4+```
+- ☕ ```Java 21+```
+- 🧩 ```Paper 1.21.4+```
 - 🍀 ```Plugin LuckPerms```
 
 ## Screenshot:
